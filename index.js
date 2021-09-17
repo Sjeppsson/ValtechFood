@@ -6,7 +6,11 @@
       var price = button.getAttribute("data-price");
 
       //Fyll datalagret vid checkout
-
+      window.dataLayer = window.dataLayer || []
+      window.dataLayer.push({
+        event: "TRIGGER",
+        product: ''
+      })
       window.location =
         "thankyou.html?product=" +
         product +
